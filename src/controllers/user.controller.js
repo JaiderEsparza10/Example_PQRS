@@ -1,5 +1,5 @@
 // controllers/pqrsController.js
-import { crear, verTodas, verUna, actualizar, eliminar } from '../models/pqrsModel.js';
+import { crear, verTodas, verUna, actualizar, eliminar } from '../models/user.module.js';
 
 export function crearPqrs(req, res){
     try {

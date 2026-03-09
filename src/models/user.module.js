@@ -23,7 +23,7 @@ export function verUna(id){
 export function actualizar(id, newDatos){
     let pqrs = verUna(id);
     if (pqrs){
-        Object.assign(pqrs, newDates);
+        Object.assign(pqrs, newDatos);
         return pqrs;
     }
     return null;

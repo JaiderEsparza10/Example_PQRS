@@ -1,6 +1,6 @@
 // routes/pqrsRoutes.js
 import express from 'express';
-import { crearPqrs, verTodasPqrs, verUnaPqrs, actualizarPqrs, eliminarPqrs } from '../controllers/pqrsController.js';
+import { crearPqrs, verTodasPqrs, verUnaPqrs, actualizarPqrs, eliminarPqrs } from '../controllers/user.controller.js';
 
 const router = express.Router();
 

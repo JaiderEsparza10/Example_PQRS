@@ -1,5 +1,5 @@
 import express from 'express';
-import rutaspqrs from './routes/pqrsRoutes.js';
+import rutaspqrs from './routes/user.routes.js';
 
 const app = express();
 const puerto = 3000;
