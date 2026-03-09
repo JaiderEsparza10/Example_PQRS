@@ -16,12 +16,12 @@ export function verTodas(){
     return listaPqrs;
 }
 
-export function verTodas(){
+export function verUna(id){
     return listaPqrs.find(p => p.id == id);
 }
 
-export function actualizar(id, newDates){
-    let pqrs = verUnaPqrs(id);
+export function actualizar(id, newDatos){
+    let pqrs = verUna(id);
     if (pqrs){
         Object.assign(pqrs, newDates);
         return pqrs;

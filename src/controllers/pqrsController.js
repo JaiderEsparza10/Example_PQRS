@@ -1,3 +1,4 @@
+// controllers/pqrsController.js
 import { crear, verTodas, verUna, actualizar, eliminar } from '../models/pqrsModel.js';
 
 export function crearPqrs(req, res){
@@ -31,15 +32,16 @@ export function verTodasPqrs(req, res){
 
 export function verUnaPqrs(req, res){
     try{
-        let idPqrs = req.params.idPqrs;
-        let datos = verUna(idPqrs   );
+        let idPqrs = req.params.id;
+        let datos = verUna(idPqrs);
         res.status(200).json({
             mensaje : "Consulta por ID, ¡Exitosa!",
-            date : datos
+            data : datos
         })
     } catch (error) {
         res.status(500).json({
-            mensaje : "Error en el servidor"
+            mensaje : "Error en el servidor",
+            error : error.message
         })
     }
 }
@@ -51,7 +53,7 @@ export function actualizarPqrs(req, res){
         let resultado = actualizar(id, datos);
         res.status(200).json({
             mensaje : "PQRS Actualizada con exito",
-            date : resultado
+            data : resultado
         })
     } catch (error) {
         res.status(500).json({
